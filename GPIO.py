@@ -1,12 +1,24 @@
 # Dummy rpi.gpio implementation
 MODULE_NAME = "GPIO DUMMY"
 
-BOARD = 1
-OUT = 1
-IN = 1
+MODE_UNKNOWN -1
+BOARD        10
+BCM          11
+SERIAL       40
+SPI          41
+I2C          42
+PWM          43
 
-PUD_DOWN = 1
-BOTH = 2
+IN = 1
+OUT = 0
+
+PUD_OFF  0
+PUD_DOWN 1
+PUD_UP   2
+
+RISING  1
+FALLING 2
+BOTH    3
 
 def add_event_detect(a, b):
   print MODULE_NAME + ' add_event_detect(' + str(a) + ', ' + str(b) + ')'
